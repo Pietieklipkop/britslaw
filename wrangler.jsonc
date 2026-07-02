@@ -2,14 +2,14 @@
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "britslaw",
 	"compatibility_date": "2026-06-29",
-	"compatibility_flags": ["nodejs_als"],
+	"compatibility_flags": ["nodejs_compat"],
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
 	"vars": {
-		"BETTER_AUTH_URL": "http://localhost:5173,http://localhost:8787"
+		"BETTER_AUTH_URL": "https://britslaw.stefanvandyk3.workers.dev,https://*-britslaw.stefanvandyk3.workers.dev"
 	},
 	"secrets": {
 		"required": ["BETTER_AUTH_SECRET"]
@@ -24,6 +24,9 @@
 					"migrations_dir": "./drizzle"
 				}
 			],
+			"vars": {
+				"BETTER_AUTH_URL": "https://britslaw.stefanvandyk3.workers.dev,https://*-britslaw.stefanvandyk3.workers.dev"
+			},
 			"secrets": {
 				"required": ["BETTER_AUTH_SECRET"]
 			}
