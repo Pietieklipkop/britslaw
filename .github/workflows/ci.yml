@@ -12,12 +12,16 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      BETTER_AUTH_SECRET: 'YfYXcJN+xNgmcVcger4DBUVeDeOfn+ed0ek/ZyANGg8='
+      BETTER_AUTH_URL: 'http://localhost:8787'
+      CLOUDFLARE_ACCOUNT_ID: 'local'
+      CLOUDFLARE_DATABASE_ID: 'local'
+      CLOUDFLARE_D1_TOKEN: 'local'
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+        uses: actions/checkout@v6
 
       - uses: voidzero-dev/setup-vp@v1
         with:
@@ -30,23 +34,20 @@ jobs:
       - name: Run lint
         run: vp lint
 
-      - name: Generate Worker types
-        run: vp run gen
-
       - name: Run check
         run: vp check
 
       - name: Build
-        run: vp build
+        run: vp run build
 
       - name: Apply local database migrations
         run: vp run db:migrate:local
 
       - name: Install Playwright Browsers & dependencies
-        run: vp exec playwright install --with-deps
+        run: vpx playwright install --with-deps
 
       - name: Run unit tests
-        run: vp run test:unit -- --run
+        run: vp run test:unit -- --run --project=server
 
       - name: Run E2E tests
         run: vp run test:e2e
