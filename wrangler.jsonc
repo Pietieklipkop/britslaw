@@ -22,7 +22,7 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "britslaw-staging",
+			"database_name": "britslaw",
 			"database_id": "0e03cf54-1e01-4027-8897-3093b8f36359",
 			"migrations_dir": "./drizzle"
 		}
