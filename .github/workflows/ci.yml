@@ -1,47 +1,49 @@
-name: CI
+name: CI Tests
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
-  ci:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - uses: voidzero-dev/setup-vp@v1
         with:
-          version: 11.9.0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: 'pnpm'
+          node-version: '24'
+          cache: true
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: vp install
 
-      - name: Build SvelteKit application types
-        run: npx vp run prepare
+      - name: Run lint
+        run: vp lint
 
-      - name: Run code check (lint, formatting, type check)
-        run: npx vp check
+      - name: Run check
+        run: vp check
+
+      - name: Build
+        run: vp build
+
+      - name: Apply local database migrations
+        run: vp run db:migrate:local
+
+      - name: Install Playwright Browsers & dependencies
+        run: vp exec playwright install --with-deps
 
       - name: Run unit tests
-        run: npx vp test --run
-
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: vp run test:unit -- --run
 
       - name: Run E2E tests
-        run: npx playwright test
+        run: vp run test:e2e
 
       - name: Deploy Preview
         if: github.event_name == 'pull_request'
