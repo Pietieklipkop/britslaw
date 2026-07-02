@@ -14,7 +14,7 @@ const PUBLIC_ROUTES = [
 	'/forgot-password',
 	'/magic-link-sent'
 ];
-const PLATFORM_HOSTS = ['app', 'www', 'admin', 'localhost'];
+const PLATFORM_HOSTS = ['app', 'www', 'admin', 'localhost', '127'];
 
 export const handle: Handle = async ({ event, resolve }) => {
 	if (event.url.pathname.startsWith('/stylesheet')) {
