@@ -1,0 +1,1736 @@
+﻿
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[src/lib/server/db/index.ts:4:27]
+ 3 | 
+ 4 | export const getDb = (d1: any) => drizzle(d1, { schema });
+   :                           ^^^
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/lib/server/auth.ts:31:32]
+ 30 | 
+ 31 | export const createAuth = (d1: any) =>
+    :                                ^^^
+ 32 |     betterAuth({
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/app.d.ts:20:13]
+ 19 |             auth: ReturnType<typeof createAuth>;
+ 20 |             tenant?: any;
+    :                      ^^^
+ 21 |         }
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/stylesheet/+page.svelte:4:22]
+ 3 | 
+ 4 |     let activeSection = $state('colors');
+   :                         ^^^^^^
+ 5 |     let toggleState = $state(false);
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/stylesheet/+page.svelte:5:20]
+ 4 |     let activeSection = $state('colors');
+ 5 |     let toggleState = $state(false);
+   :                       ^^^^^^
+ 6 |     let checkboxState = $state(false);
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/stylesheet/+page.svelte:6:22]
+ 5 |     let toggleState = $state(false);
+ 6 |     let checkboxState = $state(false);
+   :                         ^^^^^^
+ 7 |     let radioValue = $state('option1');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/stylesheet/+page.svelte:7:19]
+ 6 |     let checkboxState = $state(false);
+ 7 |     let radioValue = $state('option1');
+   :                      ^^^^^^
+ 8 |     let inputValue = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/stylesheet/+page.svelte:8:19]
+ 7 |     let radioValue = $state('option1');
+ 8 |     let inputValue = $state('');
+   :                      ^^^^^^
+ 9 |     let textareaValue = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/stylesheet/+page.svelte:9:22]
+  8 |     let inputValue = $state('');
+  9 |     let textareaValue = $state('');
+    :                         ^^^^^^
+ 10 |     let selectValue = $state('');
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/stylesheet/+page.svelte:10:20]
+  9 |     let textareaValue = $state('');
+ 10 |     let selectValue = $state('');
+    :                       ^^^^^^
+ 11 |     let rangeValue = $state(50);
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/stylesheet/+page.svelte:11:19]
+ 10 |     let selectValue = $state('');
+ 11 |     let rangeValue = $state(50);
+    :                      ^^^^^^
+ 12 | 
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[src/lib/utils/auth-client.ts:5:28]
+ 4 | export const authClient = createAuthClient({
+ 5 |     plugins: [magicLink({} as any)]
+   :                               ^^^
+ 6 | } as any) as any;
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[src/lib/utils/auth-client.ts:6:6]
+ 5 |     plugins: [magicLink({} as any)]
+ 6 | } as any) as any;
+   :      ^^^
+ 7 | 
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+   ,-[src/lib/utils/auth-client.ts:6:14]
+ 5 |     plugins: [magicLink({} as any)]
+ 6 | } as any) as any;
+   :              ^^^
+ 7 | 
+   `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x svelte(no-navigation-without-resolve): Unexpected goto() call without resolve().
+   ,-[src/routes/+page.svelte:6:8]
+ 5 |     onMount(() => {
+ 6 |         goto('/login');
+   :              ^^^^^^^^
+ 7 |     });
+   `----
+
+  x eslint(no-undef): '$props' is not defined.
+   ,-[src/routes/demo/better-auth/login/+page.svelte:5:39]
+ 4 | 
+ 5 |     let { form }: { form: ActionData } = $props();
+   :                                          ^^^^^^
+ 6 | </script>
+   `----
+  help: Either define '$props' or remove the reference to it. If '$props' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/login/+page.svelte:6:14]
+ 5 | 
+ 6 |     let email = $state('');
+   :                 ^^^^^^
+ 7 |     let password = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/login/+page.svelte:7:17]
+ 6 |     let email = $state('');
+ 7 |     let password = $state('');
+   :                    ^^^^^^
+ 8 |     let showPassword = $state(false);
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/login/+page.svelte:8:21]
+ 7 |     let password = $state('');
+ 8 |     let showPassword = $state(false);
+   :                        ^^^^^^
+ 9 |     let loading = $state(false);
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/(public)/login/+page.svelte:9:16]
+  8 |     let showPassword = $state(false);
+  9 |     let loading = $state(false);
+    :                   ^^^^^^
+ 10 |     let errorMsg = $state('');
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/(public)/login/+page.svelte:10:17]
+  9 |     let loading = $state(false);
+ 10 |     let errorMsg = $state('');
+    :                    ^^^^^^
+ 11 | 
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/routes/(public)/login/+page.svelte:24:17]
+ 23 |             });
+ 24 |         } catch (err: any) {
+    :                       ^^^
+ 25 |             errorMsg = err.message || 'Incorrect email or password.';
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/routes/(public)/login/+page.svelte:44:17]
+ 43 |             goto('/magic-link-sent');
+ 44 |         } catch (err: any) {
+    :                       ^^^
+ 45 |             errorMsg = err.message || 'Failed to send magic link.';
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x svelte(no-navigation-without-resolve): Unexpected goto() call without resolve().
+    ,-[src/routes/(public)/login/+page.svelte:43:9]
+ 42 |             });
+ 43 |             goto('/magic-link-sent');
+    :                  ^^^^^^^^^^^^^^^^^^
+ 44 |         } catch (err: any) {
+    `----
+
+  x eslint(no-undef): '$props' is not defined.
+   ,-[src/routes/demo/better-auth/+page.svelte:5:43]
+ 4 | 
+ 5 |     let { data }: { data: PageServerData } = $props();
+   :                                              ^^^^^^
+ 6 | </script>
+   `----
+  help: Either define '$props' or remove the reference to it. If '$props' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/hooks.server.ts:61:37]
+ 60 |     if (event.locals.user && event.locals.tenant) {
+ 61 |         const user = event.locals.user as any;
+    :                                           ^^^
+ 62 |         if (user.role !== 'platform_admin' && user.tenantId !== event.locals.tenant.id) {
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x eslint(no-undef): '$props' is not defined.
+   ,-[src/routes/(public)/+layout.svelte:2:21]
+ 1 | <script lang="ts">
+ 2 |     let { children } = $props();
+   :                        ^^^^^^
+ 3 | </script>
+   `----
+  help: Either define '$props' or remove the reference to it. If '$props' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/forgot-password/+page.svelte:5:14]
+ 4 | 
+ 5 |     let email = $state('');
+   :                 ^^^^^^
+ 6 |     let loading = $state(false);
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/forgot-password/+page.svelte:6:16]
+ 5 |     let email = $state('');
+ 6 |     let loading = $state(false);
+   :                   ^^^^^^
+ 7 |     let errorMsg = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/forgot-password/+page.svelte:7:17]
+ 6 |     let loading = $state(false);
+ 7 |     let errorMsg = $state('');
+   :                    ^^^^^^
+ 8 |     let successMsg = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/forgot-password/+page.svelte:8:19]
+ 7 |     let errorMsg = $state('');
+ 8 |     let successMsg = $state('');
+   :                      ^^^^^^
+ 9 | 
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/routes/(public)/forgot-password/+page.svelte:22:17]
+ 21 |             successMsg = 'Password reset link sent! Please check your inbox.';
+ 22 |         } catch (err: any) {
+    :                       ^^^
+ 23 |             errorMsg = err.message || 'Failed to send reset link.';
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x eslint(no-undef): '$derived' is not defined.
+    ,-[src/routes/(public)/magic-link-sent/+page.svelte:12:16]
+ 11 | 
+ 12 |     let minutes = $derived(Math.floor(timeLeft / 60));
+    :                   ^^^^^^^^
+ 13 |     let seconds = $derived(timeLeft % 60);
+    `----
+  help: Either define '$derived' or remove the reference to it. If '$derived' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$derived' is not defined.
+    ,-[src/routes/(public)/magic-link-sent/+page.svelte:13:16]
+ 12 |     let minutes = $derived(Math.floor(timeLeft / 60));
+ 13 |     let seconds = $derived(timeLeft % 60);
+    :                   ^^^^^^^^
+ 14 |     let timeString = $derived(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+    `----
+  help: Either define '$derived' or remove the reference to it. If '$derived' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$derived' is not defined.
+    ,-[src/routes/(public)/magic-link-sent/+page.svelte:14:19]
+ 13 |     let seconds = $derived(timeLeft % 60);
+ 14 |     let timeString = $derived(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+    :                      ^^^^^^^^
+ 15 |     let progressWidth = $derived(`${(timeLeft / initialTime) * 100}%`);
+    `----
+  help: Either define '$derived' or remove the reference to it. If '$derived' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$derived' is not defined.
+    ,-[src/routes/(public)/magic-link-sent/+page.svelte:15:22]
+ 14 |     let timeString = $derived(`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`);
+ 15 |     let progressWidth = $derived(`${(timeLeft / initialTime) * 100}%`);
+    :                         ^^^^^^^^
+ 16 | 
+    `----
+  help: Either define '$derived' or remove the reference to it. If '$derived' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/magic-link-sent/+page.svelte:8:17]
+ 7 | 
+ 8 |     let timeLeft = $state(15 * 60); // 15 minutes in seconds
+   :                    ^^^^^^
+ 9 |     const initialTime = 15 * 60;
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/routes/(public)/magic-link-sent/+page.svelte:10:21]
+  9 |     const initialTime = 15 * 60;
+ 10 |     let timerInterval: any;
+    :                        ^^^
+ 11 | 
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/register/+page.svelte:6:13]
+ 5 | 
+ 6 |     let name = $state('');
+   :                ^^^^^^
+ 7 |     let email = $state('user@example.com'); // Placeholder, typically loaded from invitation token
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/register/+page.svelte:7:14]
+ 6 |     let name = $state('');
+ 7 |     let email = $state('user@example.com'); // Placeholder, typically loaded from invitation token
+   :                 ^^^^^^
+ 8 |     let password = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+   ,-[src/routes/(public)/register/+page.svelte:8:17]
+ 7 |     let email = $state('user@example.com'); // Placeholder, typically loaded from invitation token
+ 8 |     let password = $state('');
+   :                    ^^^^^^
+ 9 |     let confirmPassword = $state('');
+   `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/(public)/register/+page.svelte:9:24]
+  8 |     let password = $state('');
+  9 |     let confirmPassword = $state('');
+    :                           ^^^^^^
+ 10 |     let acceptTerms = $state(false);
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/(public)/register/+page.svelte:10:20]
+  9 |     let confirmPassword = $state('');
+ 10 |     let acceptTerms = $state(false);
+    :                       ^^^^^^
+ 11 |     let loading = $state(false);
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/(public)/register/+page.svelte:11:16]
+ 10 |     let acceptTerms = $state(false);
+ 11 |     let loading = $state(false);
+    :                   ^^^^^^
+ 12 |     let errorMsg = $state('');
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$state' is not defined.
+    ,-[src/routes/(public)/register/+page.svelte:12:17]
+ 11 |     let loading = $state(false);
+ 12 |     let errorMsg = $state('');
+    :                    ^^^^^^
+ 13 | 
+    `----
+  help: Either define '$state' or remove the reference to it. If '$state' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$derived' is not defined.
+    ,-[src/routes/(public)/register/+page.svelte:17:17]
+ 16 |     // Simple password strength check
+ 17 |     let strength = $derived.by(() => {
+    :                    ^^^^^^^^
+ 18 |         if (!password) return 0;
+    `----
+  help: Either define '$derived' or remove the reference to it. If '$derived' is a global variable, add it to the 'globals' configuration.
+
+  x eslint(no-undef): '$derived' is not defined.
+    ,-[src/routes/(public)/register/+page.svelte:27:21]
+ 26 | 
+ 27 |     let strengthText = $derived.by(() => {
+    :                        ^^^^^^^^
+ 28 |         if (strength === 0) return '';
+    `----
+  help: Either define '$derived' or remove the reference to it. If '$derived' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(no-explicit-any): Unexpected `any`. Specify a different type.
+    ,-[src/routes/(public)/register/+page.svelte:54:17]
+ 53 |             });
+ 54 |         } catch (err: any) {
+    :                       ^^^
+ 55 |             errorMsg = err.message || 'Registration failed.';
+    `----
+  help: Use `unknown` instead, this will force you to explicitly, and safely, assert the type is correct.
+
+  ! unicorn(no-empty-file): Empty files are not allowed.
+   ,-[src/lib/index.ts:1:1]
+ 1 | // place files you want to import through the `$lib` alias in this folder.
+   : ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   `----
+  help: Delete this file or add some code to it.
+
+  x eslint(no-undef): '$props' is not defined.
+   ,-[src/routes/+layout.svelte:5:21]
+ 4 | 
+ 5 |     let { children } = $props();
+   :                        ^^^^^^
+ 6 | </script>
+   `----
+  help: Either define '$props' or remove the reference to it. If '$props' is a global variable, add it to the 'globals' configuration.
+
+  x typescript(TS7031): Binding element 'platform' implicitly has an 'any' type.
+   ,-[src/routes/(public)/+layout.server.ts:7:30]
+ 6 | 
+ 7 | export async function load({ platform, request }) {
+   :                              ^^^^^^^^
+ 8 |     if (!platform?.env?.DB) {
+   `----
+
+  x typescript(TS7031): Binding element 'request' implicitly has an 'any' type.
+   ,-[src/routes/(public)/+layout.server.ts:7:40]
+ 6 | 
+ 7 | export async function load({ platform, request }) {
+   :                                        ^^^^^^^
+ 8 |     if (!platform?.env?.DB) {
+   `----
+
+  ! typescript(no-base-to-string): 'formData.get('email')' may use Object's default stringification format ('[object Object]') when stringified.
+    ,-[src/routes/demo/better-auth/login/+page.server.ts:19:17]
+ 18 |         const formData = await event.request.formData();
+ 19 |         const email = formData.get('email')?.toString() ?? '';
+    :                       ^^^^^^^^^^^^^^^^^^^^^
+ 20 |         const password = formData.get('password')?.toString() ?? '';
+    `----
+  help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+
+  ! typescript(no-base-to-string): 'formData.get('password')' may use Object's default stringification format ('[object Object]') when stringified.
+    ,-[src/routes/demo/better-auth/login/+page.server.ts:20:20]
+ 19 |         const email = formData.get('email')?.toString() ?? '';
+ 20 |         const password = formData.get('password')?.toString() ?? '';
+    :                          ^^^^^^^^^^^^^^^^^^^^^^^^
+ 21 | 
+    `----
+  help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+
+  ! typescript(no-base-to-string): 'formData.get('email')' may use Object's default stringification format ('[object Object]') when stringified.
+    ,-[src/routes/demo/better-auth/login/+page.server.ts:43:17]
+ 42 |         const formData = await event.request.formData();
+ 43 |         const email = formData.get('email')?.toString() ?? '';
+    :                       ^^^^^^^^^^^^^^^^^^^^^
+ 44 |         const password = formData.get('password')?.toString() ?? '';
+    `----
+  help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+
+  ! typescript(no-base-to-string): 'formData.get('password')' may use Object's default stringification format ('[object Object]') when stringified.
+    ,-[src/routes/demo/better-auth/login/+page.server.ts:44:20]
+ 43 |         const email = formData.get('email')?.toString() ?? '';
+ 44 |         const password = formData.get('password')?.toString() ?? '';
+    :                          ^^^^^^^^^^^^^^^^^^^^^^^^
+ 45 |         const name = formData.get('name')?.toString() ?? '';
+    `----
+  help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+
+  ! typescript(no-base-to-string): 'formData.get('name')' may use Object's default stringification format ('[object Object]') when stringified.
+    ,-[src/routes/demo/better-auth/login/+page.server.ts:45:16]
+ 44 |         const password = formData.get('password')?.toString() ?? '';
+ 45 |         const name = formData.get('name')?.toString() ?? '';
+    :                      ^^^^^^^^^^^^^^^^^^^^
+ 46 | 
+    `----
+  help: Consider picking a property (e.g. `user.name`), using a formatter (or `JSON.stringify`), or implementing a custom `toString()`/`toLocaleString()` on the type.
+
+  x typescript(TS2403): Subsequent variable declarations must have the same type.  Variable 'onmessage' must be of type '((this: Window, ev: MessageEvent<any>) => any) | null', but here has type 'never'.
+    ,-[worker-configuration.d.ts:47:13]
+ 46 | // noinspection JSUnusedGlobalSymbols
+ 47 | declare var onmessage: never;
+    :             ^^^^^^^^^
+ 48 | /**
+    `----
+
+  x typescript(TS2300): Duplicate identifier 'DOMException'.
+    ,-[worker-configuration.d.ts:53:15]
+ 52 |  */
+ 53 | declare class DOMException extends Error {
+    :               ^^^^^^^^^^^^
+ 54 |     constructor(message?: string, name?: string);
+    `----
+
+  x typescript(TS2508): No base constructor has the specified number of type arguments.
+     ,-[worker-configuration.d.ts:109:50]
+ 108 | };
+ 109 | declare abstract class WorkerGlobalScope extends EventTarget<WorkerGlobalScopeEventMap> {
+     :                                                  ^^^^^^^^^^^
+ 110 |     EventTarget: typeof EventTarget;
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'console'.
+     ,-[worker-configuration.d.ts:229:15]
+ 228 | }
+ 229 | declare const console: Console;
+     :               ^^^^^^^
+ 230 | type BufferSource = ArrayBufferView | ArrayBuffer;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'BufferSource'.
+     ,-[worker-configuration.d.ts:230:6]
+ 229 | declare const console: Console;
+ 230 | type BufferSource = ArrayBufferView | ArrayBuffer;
+     :      ^^^^^^^^^^^^
+ 231 | type TypedArray =
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'CompileError'.
+     ,-[worker-configuration.d.ts:244:8]
+ 243 | declare namespace WebAssembly {
+ 244 |     class CompileError extends Error {
+     :           ^^^^^^^^^^^^
+ 245 |         constructor(message?: string);
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'RuntimeError'.
+     ,-[worker-configuration.d.ts:247:8]
+ 246 |     }
+ 247 |     class RuntimeError extends Error {
+     :           ^^^^^^^^^^^^
+ 248 |         constructor(message?: string);
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'ValueType'.
+     ,-[worker-configuration.d.ts:250:7]
+ 249 |     }
+ 250 |     type ValueType = 'anyfunc' | 'externref' | 'f32' | 'f64' | 'i32' | 'i64' | 'v128';
+     :          ^^^^^^^^^
+ 251 |     interface GlobalDescriptor {
+     `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'value' must be of type 'T', but here has type 'keyof ValueTypeMap'.
+     ,-[worker-configuration.d.ts:252:3]
+ 251 |     interface GlobalDescriptor {
+ 252 |         value: ValueType;
+     :         ^^^^^
+ 253 |         mutable?: boolean;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Global'.
+     ,-[worker-configuration.d.ts:255:8]
+ 254 |     }
+ 255 |     class Global {
+     :           ^^^^^^
+ 256 |         constructor(descriptor: GlobalDescriptor, value?: any);
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'ImportValue'.
+     ,-[worker-configuration.d.ts:260:7]
+ 259 |     }
+ 260 |     type ImportValue = ExportValue | number;
+     :          ^^^^^^^^^^^
+ 261 |     type ModuleImports = Record<string, ImportValue>;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'ModuleImports'.
+     ,-[worker-configuration.d.ts:261:7]
+ 260 |     type ImportValue = ExportValue | number;
+ 261 |     type ModuleImports = Record<string, ImportValue>;
+     :          ^^^^^^^^^^^^^
+ 262 |     type Imports = Record<string, ModuleImports>;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Imports'.
+     ,-[worker-configuration.d.ts:262:7]
+ 261 |     type ModuleImports = Record<string, ImportValue>;
+ 262 |     type Imports = Record<string, ModuleImports>;
+     :          ^^^^^^^
+ 263 |     type ExportValue = Function | Global | Memory | Table;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'ExportValue'.
+     ,-[worker-configuration.d.ts:263:7]
+ 262 |     type Imports = Record<string, ModuleImports>;
+ 263 |     type ExportValue = Function | Global | Memory | Table;
+     :          ^^^^^^^^^^^
+ 264 |     type Exports = Record<string, ExportValue>;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Exports'.
+     ,-[worker-configuration.d.ts:264:7]
+ 263 |     type ExportValue = Function | Global | Memory | Table;
+ 264 |     type Exports = Record<string, ExportValue>;
+     :          ^^^^^^^
+ 265 |     class Instance {
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Instance'.
+     ,-[worker-configuration.d.ts:265:8]
+ 264 |     type Exports = Record<string, ExportValue>;
+ 265 |     class Instance {
+     :           ^^^^^^^^
+ 266 |         constructor(module: Module, imports?: Imports);
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Memory'.
+     ,-[worker-configuration.d.ts:274:8]
+ 273 |     }
+ 274 |     class Memory {
+     :           ^^^^^^
+ 275 |         constructor(descriptor: MemoryDescriptor);
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'ImportExportKind'.
+     ,-[worker-configuration.d.ts:279:7]
+ 278 |     }
+ 279 |     type ImportExportKind = 'function' | 'global' | 'memory' | 'table';
+     :          ^^^^^^^^^^^^^^^^
+ 280 |     interface ModuleExportDescriptor {
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Module'.
+     ,-[worker-configuration.d.ts:289:17]
+ 288 |     }
+ 289 |     abstract class Module {
+     :                    ^^^^^^
+ 290 |         static customSections(module: Module, sectionName: string): ArrayBuffer[];
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'TableKind'.
+     ,-[worker-configuration.d.ts:294:7]
+ 293 |     }
+ 294 |     type TableKind = 'anyfunc' | 'externref';
+     :          ^^^^^^^^^
+ 295 |     interface TableDescriptor {
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Table'.
+     ,-[worker-configuration.d.ts:300:8]
+ 299 |     }
+ 300 |     class Table {
+     :           ^^^^^
+ 301 |         constructor(descriptor: TableDescriptor, value?: any);
+     `----
+
+  x typescript(TS2315): Type 'EventListenerOrEventListenerObject' is not generic.
+     ,-[worker-configuration.d.ts:407:11]
+ 406 |     type: Type,
+ 407 |     handler: EventListenerOrEventListenerObject<WorkerGlobalScopeEventMap[Type]>,
+     :              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 408 |     options?: EventTargetAddEventListenerOptions | boolean
+     `----
+
+  x typescript(TS2315): Type 'EventListenerOrEventListenerObject' is not generic.
+     ,-[worker-configuration.d.ts:412:11]
+ 411 |     type: Type,
+ 412 |     handler: EventListenerOrEventListenerObject<WorkerGlobalScopeEventMap[Type]>,
+     :              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 413 |     options?: EventTargetEventListenerOptions | boolean
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'self'.
+     ,-[worker-configuration.d.ts:458:15]
+ 457 | ): Promise<Response>;
+ 458 | declare const self: ServiceWorkerGlobalScope;
+     :               ^^^^
+ 459 | /**
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'crypto'.
+     ,-[worker-configuration.d.ts:467:15]
+ 466 |  */
+ 467 | declare const crypto: Crypto;
+     :               ^^^^^^
+ 468 | /**
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'caches'.
+     ,-[worker-configuration.d.ts:473:15]
+ 472 |  */
+ 473 | declare const caches: CacheStorage;
+     :               ^^^^^^
+ 474 | declare const scheduler: Scheduler;
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'scheduler'.
+     ,-[worker-configuration.d.ts:474:15]
+ 473 | declare const caches: CacheStorage;
+ 474 | declare const scheduler: Scheduler;
+     :               ^^^^^^^^^
+ 475 | /**
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'performance'.
+     ,-[worker-configuration.d.ts:481:15]
+ 480 |  */
+ 481 | declare const performance: Performance;
+     :               ^^^^^^^^^^^
+ 482 | declare const Cloudflare: Cloudflare;
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'origin'.
+     ,-[worker-configuration.d.ts:483:15]
+ 482 | declare const Cloudflare: Cloudflare;
+ 483 | declare const origin: string;
+     :               ^^^^^^
+ 484 | declare const navigator: Navigator;
+     `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'navigator'.
+     ,-[worker-configuration.d.ts:484:15]
+ 483 | declare const origin: string;
+ 484 | declare const navigator: Navigator;
+     :               ^^^^^^^^^
+ 485 | interface TestController {}
+     `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'transfer' must be of type 'Transferable[] | undefined', but here has type 'any[] | undefined'.
+     ,-[worker-configuration.d.ts:552:2]
+ 551 | interface StructuredSerializeOptions {
+ 552 |     transfer?: any[];
+     :     ^^^^^^^^
+ 553 | }
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Navigator'.
+     ,-[worker-configuration.d.ts:554:24]
+ 553 | }
+ 554 | declare abstract class Navigator {
+     :                        ^^^^^^^^^
+ 555 |     sendBeacon(url: string, body?: BodyInit): boolean;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'Event'.
+     ,-[worker-configuration.d.ts:767:15]
+ 766 |  */
+ 767 | declare class Event {
+     :               ^^^^^
+ 768 |     constructor(type: string, init?: EventInit);
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'EventListener'.
+     ,-[worker-configuration.d.ts:891:6]
+ 890 | }
+ 891 | type EventListener<EventType extends Event = Event> = (event: EventType) => void;
+     :      ^^^^^^^^^^^^^
+ 892 | interface EventListenerObject<EventType extends Event = Event> {
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'EventListenerOrEventListenerObject'.
+     ,-[worker-configuration.d.ts:895:6]
+ 894 | }
+ 895 | type EventListenerOrEventListenerObject<EventType extends Event = Event> =
+     :      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 896 |     | EventListener<EventType>
+     `----
+
+  x typescript(TS2315): Type 'EventListener' is not generic.
+     ,-[worker-configuration.d.ts:896:4]
+ 895 | type EventListenerOrEventListenerObject<EventType extends Event = Event> =
+ 896 |     | EventListener<EventType>
+     :       ^^^^^^^^^^^^^^^^^^^^^^^^
+ 897 |     | EventListenerObject<EventType>;
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'EventTarget'.
+     ,-[worker-configuration.d.ts:903:15]
+ 902 |  */
+ 903 | declare class EventTarget<EventMap extends Record<string, Event> = Record<string, Event>> {
+     :               ^^^^^^^^^^^
+ 904 |     constructor();
+     `----
+
+  x typescript(TS2315): Type 'EventListenerOrEventListenerObject' is not generic.
+     ,-[worker-configuration.d.ts:912:12]
+ 911 |         type: Type,
+ 912 |         handler: EventListenerOrEventListenerObject<EventMap[Type]>,
+     :                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 913 |         options?: EventTargetAddEventListenerOptions | boolean
+     `----
+
+  x typescript(TS2315): Type 'EventListenerOrEventListenerObject' is not generic.
+     ,-[worker-configuration.d.ts:922:12]
+ 921 |         type: Type,
+ 922 |         handler: EventListenerOrEventListenerObject<EventMap[Type]>,
+     :                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 923 |         options?: EventTargetEventListenerOptions | boolean
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'AbortController'.
+     ,-[worker-configuration.d.ts:949:15]
+ 948 |  */
+ 949 | declare class AbortController {
+     :               ^^^^^^^^^^^^^^^
+ 950 |     constructor();
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'AbortSignal'.
+     ,-[worker-configuration.d.ts:969:24]
+ 968 |  */
+ 969 | declare abstract class AbortSignal extends EventTarget {
+     :                        ^^^^^^^^^^^
+ 970 |     /**
+     `----
+
+  x typescript(TS2300): Duplicate identifier 'CustomEvent'.
+      ,-[worker-configuration.d.ts:1035:15]
+ 1034 |  */
+ 1035 | declare class CustomEvent<T = any> extends Event {
+      :               ^^^^^^^^^^^
+ 1036 |     constructor(type: string, init?: CustomEventCustomEventInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'Blob'.
+      ,-[worker-configuration.d.ts:1055:15]
+ 1054 |  */
+ 1055 | declare class Blob {
+      :               ^^^^
+ 1056 |     constructor(bits?: ((ArrayBuffer | ArrayBufferView) | string | Blob)[], options?: BlobOptions);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'File'.
+      ,-[worker-configuration.d.ts:1108:15]
+ 1107 |  */
+ 1108 | declare class File extends Blob {
+      :               ^^^^
+ 1109 |     constructor(
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'CacheStorage'.
+      ,-[worker-configuration.d.ts:1136:24]
+ 1135 |  */
+ 1136 | declare abstract class CacheStorage {
+      :                        ^^^^^^^^^^^^
+ 1137 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'Cache'.
+      ,-[worker-configuration.d.ts:1150:24]
+ 1149 |  */
+ 1150 | declare abstract class Cache {
+      :                        ^^^^^
+ 1151 |     /* [Cloudflare Docs Reference](https://developers.cloudflare.com/workers/runtime-apis/cache/#delete) */
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'Crypto'.
+      ,-[worker-configuration.d.ts:1169:24]
+ 1168 |  */
+ 1169 | declare abstract class Crypto {
+      :                        ^^^^^^
+ 1170 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'SubtleCrypto'.
+      ,-[worker-configuration.d.ts:1208:24]
+ 1207 |  */
+ 1208 | declare abstract class SubtleCrypto {
+      :                        ^^^^^^^^^^^^
+ 1209 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'CryptoKey'.
+      ,-[worker-configuration.d.ts:1342:24]
+ 1341 |  */
+ 1342 | declare abstract class CryptoKey {
+      :                        ^^^^^^^^^
+ 1343 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'kty' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1379:2]
+ 1378 | interface JsonWebKey {
+ 1379 |     kty: string;
+      :     ^^^
+ 1380 |     use?: string;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'kty' must be of type 'string | undefined', but here has type 'string'.
+      ,-[worker-configuration.d.ts:1379:2]
+ 1378 | interface JsonWebKey {
+ 1379 |     kty: string;
+      :     ^^^
+ 1380 |     use?: string;
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'TextDecoder'.
+      ,-[worker-configuration.d.ts:1482:15]
+ 1481 |  */
+ 1482 | declare class TextDecoder {
+      :               ^^^^^^^^^^^
+ 1483 |     constructor(label?: string, options?: TextDecoderConstructorOptions);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'TextEncoder'.
+      ,-[worker-configuration.d.ts:1499:15]
+ 1498 |  */
+ 1499 | declare class TextEncoder {
+      :               ^^^^^^^^^^^
+ 1500 |     constructor();
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ErrorEvent'.
+      ,-[worker-configuration.d.ts:1531:15]
+ 1530 |  */
+ 1531 | declare class ErrorEvent extends Event {
+      :               ^^^^^^^^^^
+ 1532 |     constructor(type: string, init?: ErrorEventErrorEventInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'MessageEvent'.
+      ,-[worker-configuration.d.ts:1576:15]
+ 1575 |  */
+ 1576 | declare class MessageEvent extends Event {
+      :               ^^^^^^^^^^^^
+ 1577 |     constructor(type: string, initializer: MessageEventInit);
+      `----
+
+  x typescript(TS2687): All declarations of 'data' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1610:2]
+ 1609 | interface MessageEventInit {
+ 1610 |     data: ArrayBuffer | string;
+      :     ^^^^
+ 1611 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'data' must be of type 'T | undefined', but here has type 'string | ArrayBuffer'.
+      ,-[worker-configuration.d.ts:1610:2]
+ 1609 | interface MessageEventInit {
+ 1610 |     data: ArrayBuffer | string;
+      :     ^^^^
+ 1611 | }
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'PromiseRejectionEvent'.
+      ,-[worker-configuration.d.ts:1617:24]
+ 1616 |  */
+ 1617 | declare abstract class PromiseRejectionEvent extends Event {
+      :                        ^^^^^^^^^^^^^^^^^^^^^
+ 1618 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'FormData'.
+      ,-[worker-configuration.d.ts:1636:15]
+ 1635 |  */
+ 1636 | declare class FormData {
+      :               ^^^^^^^^
+ 1637 |     constructor();
+      `----
+
+  x typescript(TS2430): Interface 'Element' incorrectly extends interface 'ChildNode'.
+      ,-[worker-configuration.d.ts:1735:11]
+ 1734 | }
+ 1735 | interface Element {
+      :           ^^^^^^^
+ 1736 |     tagName: string;
+      `----
+
+  x typescript(TS2430): Interface 'Element' incorrectly extends interface 'ParentNode'.
+      ,-[worker-configuration.d.ts:1735:11]
+ 1734 | }
+ 1735 | interface Element {
+      :           ^^^^^^^
+ 1736 |     tagName: string;
+      `----
+
+  x typescript(TS2687): All declarations of 'tagName' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1736:2]
+ 1735 | interface Element {
+ 1736 |     tagName: string;
+      :     ^^^^^^^
+ 1737 |     readonly attributes: IterableIterator<string[]>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'attributes' must be of type 'NamedNodeMap', but here has type 'IterableIterator<string[]>'.
+      ,-[worker-configuration.d.ts:1737:11]
+ 1736 |     tagName: string;
+ 1737 |     readonly attributes: IterableIterator<string[]>;
+      :              ^^^^^^^^^^
+ 1738 |     readonly removed: boolean;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'namespaceURI' must be of type 'string | null', but here has type 'string'.
+      ,-[worker-configuration.d.ts:1739:11]
+ 1738 |     readonly removed: boolean;
+ 1739 |     readonly namespaceURI: string;
+      :              ^^^^^^^^^^^^
+ 1740 |     getAttribute(name: string): string | null;
+      `----
+
+  x typescript(TS2430): Interface 'Comment' incorrectly extends interface 'CharacterData'.
+      ,-[worker-configuration.d.ts:1760:11]
+ 1759 | }
+ 1760 | interface Comment {
+      :           ^^^^^^^
+ 1761 |     text: string;
+      `----
+
+  x typescript(TS2430): Interface 'Text' incorrectly extends interface 'CharacterData'.
+      ,-[worker-configuration.d.ts:1768:11]
+ 1767 | }
+ 1768 | interface Text {
+      :           ^^^^
+ 1769 |     readonly text: string;
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'HeadersInit'.
+      ,-[worker-configuration.d.ts:1800:6]
+ 1799 | }
+ 1800 | type HeadersInit = Headers | Iterable<Iterable<string>> | Record<string, string>;
+      :      ^^^^^^^^^^^
+ 1801 | /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'Headers'.
+      ,-[worker-configuration.d.ts:1806:15]
+ 1805 |  */
+ 1806 | declare class Headers {
+      :               ^^^^^^^
+ 1807 |     constructor(init?: HeadersInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'BodyInit'.
+      ,-[worker-configuration.d.ts:1857:6]
+ 1856 | }
+ 1857 | type BodyInit =
+      :      ^^^^^^^^
+ 1858 |     | ReadableStream<Uint8Array>
+      `----
+
+  x typescript(TS2403): Subsequent variable declarations must have the same type.  Variable 'Response' must be of type '{ new (body?: BodyInit | null | undefined, init?: ResponseInit | undefined): Response; prototype: Response; error(): Response; json(data: any, init?: ResponseInit | undefined): Response; redirect(url: string | URL, status?: number | undefined): Response; }', but here has type
+  | '{ new (body?: BodyInit | null | undefined, init?: ResponseInit | undefined): Response; prototype: Response; error(): Response; redirect(url: string, status?: number | undefined): Response; json(any: any, maybeInit?: Response | ... 1 more ... | undefined): Response; }'.
+      ,-[worker-configuration.d.ts:1890:13]
+ 1889 |  */
+ 1890 | declare var Response: {
+      :             ^^^^^^^^
+ 1891 |     prototype: Response;
+      `----
+
+  x typescript(TS2687): All declarations of 'status' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1914:2]
+ 1913 |      */
+ 1914 |     status: number;
+      :     ^^^^^^
+ 1915 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'statusText' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1920:2]
+ 1919 |      */
+ 1920 |     statusText: string;
+      :     ^^^^^^^^^^
+ 1921 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'headers' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1926:2]
+ 1925 |      */
+ 1926 |     headers: Headers;
+      :     ^^^^^^^
+ 1927 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'ok' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1932:2]
+ 1931 |      */
+ 1932 |     ok: boolean;
+      :     ^^
+ 1933 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'redirected' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1938:2]
+ 1937 |      */
+ 1938 |     redirected: boolean;
+      :     ^^^^^^^^^^
+ 1939 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'url' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1944:2]
+ 1943 |      */
+ 1944 |     url: string;
+      :     ^^^
+ 1945 |     webSocket: WebSocket | null;
+      `----
+
+  x typescript(TS2687): All declarations of 'type' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1952:2]
+ 1951 |      */
+ 1952 |     type: 'default' | 'error';
+      :     ^^^^
+ 1953 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'type' must be of type 'ResponseType', but here has type '"default" | "error"'.
+      ,-[worker-configuration.d.ts:1952:2]
+ 1951 |      */
+ 1952 |     type: 'default' | 'error';
+      :     ^^^^
+ 1953 | }
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'RequestInfo'.
+      ,-[worker-configuration.d.ts:1962:6]
+ 1961 | }
+ 1962 | type RequestInfo<CfHostMetadata = unknown, Cf = CfProperties<CfHostMetadata>> =
+      :      ^^^^^^^^^^^
+ 1963 |     | Request<CfHostMetadata, Cf>
+      `----
+
+  x typescript(TS2403): Subsequent variable declarations must have the same type.  Variable 'Request' must be of type '{ new (input: URL | RequestInfo, init?: RequestInit<CfProperties<unknown>> | undefined): Request<unknown, CfProperties<unknown>>; prototype: Request<...>; }', but here has type '{ new <CfHostMetadata = unknown, Cf = CfProperties<CfHostMetadata>>(input: any, init?:
+  | RequestInit<Cf> | undefined): Request<CfHostMetadata, Cf>; prototype: Request<...>; }'.
+      ,-[worker-configuration.d.ts:1970:13]
+ 1969 |  */
+ 1970 | declare var Request: {
+      :             ^^^^^^^
+ 1971 |     prototype: Request;
+      `----
+
+  x typescript(TS2315): Type 'RequestInfo' is not generic.
+      ,-[worker-configuration.d.ts:1973:10]
+ 1972 |     new <CfHostMetadata = unknown, Cf = CfProperties<CfHostMetadata>>(
+ 1973 |         input: RequestInfo<CfProperties> | URL,
+      :                ^^^^^^^^^^^^^^^^^^^^^^^^^
+ 1974 |         init?: RequestInit<Cf>
+      `----
+
+  x typescript(TS2687): All declarations of 'method' must have identical modifiers.
+      ,-[worker-configuration.d.ts:1994:2]
+ 1993 |      */
+ 1994 |     method: string;
+      :     ^^^^^^
+ 1995 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'url' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2000:2]
+ 1999 |      */
+ 2000 |     url: string;
+      :     ^^^
+ 2001 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'headers' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2006:2]
+ 2005 |      */
+ 2006 |     headers: Headers;
+      :     ^^^^^^^
+ 2007 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'redirect' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2012:2]
+ 2011 |      */
+ 2012 |     redirect: string;
+      :     ^^^^^^^^
+ 2013 |     fetcher: Fetcher | null;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'redirect' must be of type 'RequestRedirect', but here has type 'string'.
+      ,-[worker-configuration.d.ts:2012:2]
+ 2011 |      */
+ 2012 |     redirect: string;
+      :     ^^^^^^^^
+ 2013 |     fetcher: Fetcher | null;
+      `----
+
+  x typescript(TS2687): All declarations of 'signal' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2019:2]
+ 2018 |      */
+ 2019 |     signal: AbortSignal;
+      :     ^^^^^^
+ 2020 |     cf?: Cf;
+      `----
+
+  x typescript(TS2687): All declarations of 'integrity' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2026:2]
+ 2025 |      */
+ 2026 |     integrity: string;
+      :     ^^^^^^^^^
+ 2027 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'keepalive' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2032:2]
+ 2031 |      */
+ 2032 |     keepalive: boolean;
+      :     ^^^^^^^^^
+ 2033 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'cache' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2038:2]
+ 2037 |      */
+ 2038 |     cache?: 'no-store' | 'no-cache';
+      :     ^^^^^
+ 2039 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'cache' must be of type 'RequestCache', but here has type '"no-cache" | "no-store" | undefined'.
+      ,-[worker-configuration.d.ts:2038:2]
+ 2037 |      */
+ 2038 |     cache?: 'no-store' | 'no-cache';
+      :     ^^^^^
+ 2039 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'redirect' must be of type 'RequestRedirect | undefined', but here has type 'string | undefined'.
+      ,-[worker-configuration.d.ts:2048:2]
+ 2047 |     /* A string indicating whether request follows redirects, results in an error upon encountering a redirect, or returns the redirect (in an opaque fashion). Sets request's redirect. */
+ 2048 |     redirect?: string;
+      :     ^^^^^^^^
+ 2049 |     fetcher?: Fetcher | null;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'cache' must be of type 'RequestCache | undefined', but here has type '"no-cache" | "no-store" | undefined'.
+      ,-[worker-configuration.d.ts:2052:2]
+ 2051 |     /* A string indicating how the request will interact with the browser's cache to set request's cache. */
+ 2052 |     cache?: 'no-store' | 'no-cache';
+      :     ^^^^^
+ 2053 |     /* A cryptographic hash of the resource to be fetched by request. Sets request's integrity. */
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'highWaterMark' must be of type 'number | undefined', but here has type 'number | bigint | undefined'.
+      ,-[worker-configuration.d.ts:2465:2]
+ 2464 | interface QueuingStrategy<T = any> {
+ 2465 |     highWaterMark?: number | bigint;
+      :     ^^^^^^^^^^^^^
+ 2466 |     size?: (chunk: T) => number | bigint;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'size' must be of type 'QueuingStrategySize<T> | undefined', but here has type '((chunk: T) => number | bigint) | undefined'.
+      ,-[worker-configuration.d.ts:2466:2]
+ 2465 |     highWaterMark?: number | bigint;
+ 2466 |     size?: (chunk: T) => number | bigint;
+      :     ^^^^
+ 2467 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'type' must be of type 'undefined', but here has type 'string | undefined'.
+      ,-[worker-configuration.d.ts:2469:2]
+ 2468 | interface UnderlyingSink<W = any> {
+ 2469 |     type?: string;
+      :     ^^^^
+ 2470 |     start?: (controller: WritableStreamDefaultController) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'start' must be of type 'UnderlyingSinkStartCallback | undefined', but here has type '((controller: WritableStreamDefaultController) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2470:2]
+ 2469 |     type?: string;
+ 2470 |     start?: (controller: WritableStreamDefaultController) => void | Promise<void>;
+      :     ^^^^^
+ 2471 |     write?: (chunk: W, controller: WritableStreamDefaultController) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'write' must be of type 'UnderlyingSinkWriteCallback<W> | undefined', but here has type '((chunk: W, controller: WritableStreamDefaultController) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2471:2]
+ 2470 |     start?: (controller: WritableStreamDefaultController) => void | Promise<void>;
+ 2471 |     write?: (chunk: W, controller: WritableStreamDefaultController) => void | Promise<void>;
+      :     ^^^^^
+ 2472 |     abort?: (reason: any) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'abort' must be of type 'UnderlyingSinkAbortCallback | undefined', but here has type '((reason: any) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2472:2]
+ 2471 |     write?: (chunk: W, controller: WritableStreamDefaultController) => void | Promise<void>;
+ 2472 |     abort?: (reason: any) => void | Promise<void>;
+      :     ^^^^^
+ 2473 |     close?: () => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'close' must be of type 'UnderlyingSinkCloseCallback | undefined', but here has type '(() => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2473:2]
+ 2472 |     abort?: (reason: any) => void | Promise<void>;
+ 2473 |     close?: () => void | Promise<void>;
+      :     ^^^^^
+ 2474 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'start' must be of type '((controller: ReadableByteStreamController) => any) | undefined', but here has type '((controller: ReadableByteStreamController) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2478:2]
+ 2477 |     autoAllocateChunkSize?: number;
+ 2478 |     start?: (controller: ReadableByteStreamController) => void | Promise<void>;
+      :     ^^^^^
+ 2479 |     pull?: (controller: ReadableByteStreamController) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'pull' must be of type '((controller: ReadableByteStreamController) => void | PromiseLike<void>) | undefined', but here has type '((controller: ReadableByteStreamController) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2479:2]
+ 2478 |     start?: (controller: ReadableByteStreamController) => void | Promise<void>;
+ 2479 |     pull?: (controller: ReadableByteStreamController) => void | Promise<void>;
+      :     ^^^^
+ 2480 |     cancel?: (reason: any) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'cancel' must be of type 'UnderlyingSourceCancelCallback | undefined', but here has type '((reason: any) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2480:2]
+ 2479 |     pull?: (controller: ReadableByteStreamController) => void | Promise<void>;
+ 2480 |     cancel?: (reason: any) => void | Promise<void>;
+      :     ^^^^^^
+ 2481 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'type' must be of type '"bytes" | undefined', but here has type '"" | undefined'.
+      ,-[worker-configuration.d.ts:2483:2]
+ 2482 | interface UnderlyingSource<R = any> {
+ 2483 |     type?: '' | undefined;
+      :     ^^^^
+ 2484 |     start?: (controller: ReadableStreamDefaultController<R>) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'start' must be of type 'UnderlyingSourceStartCallback<R> | undefined', but here has type '((controller: ReadableStreamDefaultController<R>) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2484:2]
+ 2483 |     type?: '' | undefined;
+ 2484 |     start?: (controller: ReadableStreamDefaultController<R>) => void | Promise<void>;
+      :     ^^^^^
+ 2485 |     pull?: (controller: ReadableStreamDefaultController<R>) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'pull' must be of type 'UnderlyingSourcePullCallback<R> | undefined', but here has type '((controller: ReadableStreamDefaultController<R>) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2485:2]
+ 2484 |     start?: (controller: ReadableStreamDefaultController<R>) => void | Promise<void>;
+ 2485 |     pull?: (controller: ReadableStreamDefaultController<R>) => void | Promise<void>;
+      :     ^^^^
+ 2486 |     cancel?: (reason: any) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'cancel' must be of type 'UnderlyingSourceCancelCallback | undefined', but here has type '((reason: any) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2486:2]
+ 2485 |     pull?: (controller: ReadableStreamDefaultController<R>) => void | Promise<void>;
+ 2486 |     cancel?: (reason: any) => void | Promise<void>;
+      :     ^^^^^^
+ 2487 |     expectedLength?: number | bigint;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'readableType' must be of type 'undefined', but here has type 'string | undefined'.
+      ,-[worker-configuration.d.ts:2490:2]
+ 2489 | interface Transformer<I = any, O = any> {
+ 2490 |     readableType?: string;
+      :     ^^^^^^^^^^^^
+ 2491 |     writableType?: string;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'writableType' must be of type 'undefined', but here has type 'string | undefined'.
+      ,-[worker-configuration.d.ts:2491:2]
+ 2490 |     readableType?: string;
+ 2491 |     writableType?: string;
+      :     ^^^^^^^^^^^^
+ 2492 |     start?: (controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'start' must be of type 'TransformerStartCallback<O> | undefined', but here has type '((controller: TransformStreamDefaultController<O>) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2492:2]
+ 2491 |     writableType?: string;
+ 2492 |     start?: (controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+      :     ^^^^^
+ 2493 |     transform?: (chunk: I, controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'transform' must be of type 'TransformerTransformCallback<I, O> | undefined', but here has type '((chunk: I, controller: TransformStreamDefaultController<O>) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2493:2]
+ 2492 |     start?: (controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+ 2493 |     transform?: (chunk: I, controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+      :     ^^^^^^^^^
+ 2494 |     flush?: (controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'flush' must be of type 'TransformerFlushCallback<O> | undefined', but here has type '((controller: TransformStreamDefaultController<O>) => void | Promise<void>) | undefined'.
+      ,-[worker-configuration.d.ts:2494:2]
+ 2493 |     transform?: (chunk: I, controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+ 2494 |     flush?: (controller: TransformStreamDefaultController<O>) => void | Promise<void>;
+      :     ^^^^^
+ 2495 |     cancel?: (reason: any) => void | Promise<void>;
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ReadableStreamReadResult'.
+      ,-[worker-configuration.d.ts:2521:6]
+ 2520 | }
+ 2521 | type ReadableStreamReadResult<R = any> =
+      :      ^^^^^^^^^^^^^^^^^^^^^^^^
+ 2522 |     | {
+      `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'ReadableStream'.
+      ,-[worker-configuration.d.ts:2535:11]
+ 2534 |  */
+ 2535 | interface ReadableStream<R = any> {
+      :           ^^^^^^^^^^^^^^
+ 2536 |     /**
+      `----
+
+  x typescript(TS2451): Cannot redeclare block-scoped variable 'ReadableStream'.
+      ,-[worker-configuration.d.ts:2589:15]
+ 2588 |  */
+ 2589 | declare const ReadableStream: {
+      :               ^^^^^^^^^^^^^^
+ 2590 |     prototype: ReadableStream;
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ReadableStreamDefaultReader'.
+      ,-[worker-configuration.d.ts:2605:15]
+ 2604 |  */
+ 2605 | declare class ReadableStreamDefaultReader<R = any> {
+      :               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2606 |     constructor(stream: ReadableStream);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ReadableStreamBYOBReader'.
+      ,-[worker-configuration.d.ts:2627:15]
+ 2626 |  */
+ 2627 | declare class ReadableStreamBYOBReader {
+      :               ^^^^^^^^^^^^^^^^^^^^^^^^
+ 2628 |     constructor(stream: ReadableStream);
+      `----
+
+  x typescript(TS2687): All declarations of 'mode' must have identical modifiers.
+      ,-[worker-configuration.d.ts:2657:2]
+ 2656 |      */
+ 2657 |     mode: 'byob';
+      :     ^^^^
+ 2658 | }
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'mode' must be of type '"byob" | undefined', but here has type '"byob"'.
+      ,-[worker-configuration.d.ts:2657:2]
+ 2656 |      */
+ 2657 |     mode: 'byob';
+      :     ^^^^
+ 2658 | }
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ReadableStreamBYOBRequest'.
+      ,-[worker-configuration.d.ts:2664:24]
+ 2663 |  */
+ 2664 | declare abstract class ReadableStreamBYOBRequest {
+      :                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2665 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ReadableStreamDefaultController'.
+      ,-[worker-configuration.d.ts:2690:24]
+ 2689 |  */
+ 2690 | declare abstract class ReadableStreamDefaultController<R = any> {
+      :                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2691 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ReadableByteStreamController'.
+      ,-[worker-configuration.d.ts:2721:24]
+ 2720 |  */
+ 2721 | declare abstract class ReadableByteStreamController {
+      :                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2722 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'WritableStreamDefaultController'.
+      ,-[worker-configuration.d.ts:2758:24]
+ 2757 |  */
+ 2758 | declare abstract class WritableStreamDefaultController {
+      :                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2759 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'TransformStreamDefaultController'.
+      ,-[worker-configuration.d.ts:2777:24]
+ 2776 |  */
+ 2777 | declare abstract class TransformStreamDefaultController<O = any> {
+      :                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2778 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'WritableStream'.
+      ,-[worker-configuration.d.ts:2817:15]
+ 2816 |  */
+ 2817 | declare class WritableStream<W = any> {
+      :               ^^^^^^^^^^^^^^
+ 2818 |     constructor(underlyingSink?: UnderlyingSink, queuingStrategy?: QueuingStrategy);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'WritableStreamDefaultWriter'.
+      ,-[worker-configuration.d.ts:2849:15]
+ 2848 |  */
+ 2849 | declare class WritableStreamDefaultWriter<W = any> {
+      :               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2850 |     constructor(stream: WritableStream);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'TransformStream'.
+      ,-[worker-configuration.d.ts:2899:15]
+ 2898 |  */
+ 2899 | declare class TransformStream<I = any, O = any> {
+      :               ^^^^^^^^^^^^^^^
+ 2900 |     constructor(
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'CompressionStream'.
+      ,-[worker-configuration.d.ts:2941:15]
+ 2940 |  */
+ 2941 | declare class CompressionStream extends TransformStream<ArrayBuffer | ArrayBufferView, Uint8Array> {
+      :               ^^^^^^^^^^^^^^^^^
+ 2942 |     constructor(format: 'gzip' | 'deflate' | 'deflate-raw');
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'DecompressionStream'.
+      ,-[worker-configuration.d.ts:2949:15]
+ 2948 |  */
+ 2949 | declare class DecompressionStream extends TransformStream<
+      :               ^^^^^^^^^^^^^^^^^^^
+ 2950 |     ArrayBuffer | ArrayBufferView,
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'TextEncoderStream'.
+      ,-[worker-configuration.d.ts:2960:15]
+ 2959 |  */
+ 2960 | declare class TextEncoderStream extends TransformStream<string, Uint8Array> {
+      :               ^^^^^^^^^^^^^^^^^
+ 2961 |     constructor();
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'TextDecoderStream'.
+      ,-[worker-configuration.d.ts:2969:15]
+ 2968 |  */
+ 2969 | declare class TextDecoderStream extends TransformStream<ArrayBuffer | ArrayBufferView, string> {
+      :               ^^^^^^^^^^^^^^^^^
+ 2970 |     constructor(label?: string, options?: TextDecoderStreamTextDecoderStreamInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'ByteLengthQueuingStrategy'.
+      ,-[worker-configuration.d.ts:2984:15]
+ 2983 |  */
+ 2984 | declare class ByteLengthQueuingStrategy implements QueuingStrategy<ArrayBufferView> {
+      :               ^^^^^^^^^^^^^^^^^^^^^^^^^
+ 2985 |     constructor(init: QueuingStrategyInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'CountQueuingStrategy'.
+      ,-[worker-configuration.d.ts:3000:15]
+ 2999 |  */
+ 3000 | declare class CountQueuingStrategy implements QueuingStrategy {
+      :               ^^^^^^^^^^^^^^^^^^^^
+ 3001 |     constructor(init: QueuingStrategyInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'URL'.
+      ,-[worker-configuration.d.ts:3152:15]
+ 3151 |  */
+ 3152 | declare class URL {
+      :               ^^^
+ 3153 |     constructor(url: string | URL, base?: string | URL);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'URLSearchParams'.
+      ,-[worker-configuration.d.ts:3324:15]
+ 3323 |  */
+ 3324 | declare class URLSearchParams {
+      :               ^^^^^^^^^^^^^^^
+ 3325 |     constructor(init?: Iterable<Iterable<string>> | Record<string, string> | string);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'URLPattern'.
+      ,-[worker-configuration.d.ts:3388:15]
+ 3387 | }
+ 3388 | declare class URLPattern {
+      :               ^^^^^^^^^^
+ 3389 |     constructor(
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'groups' must be of type 'Record<string, string | undefined>', but here has type 'Record<string, string>'.
+      ,-[worker-configuration.d.ts:3419:2]
+ 3418 |     input: string;
+ 3419 |     groups: Record<string, string>;
+      :     ^^^^^^
+ 3420 | }
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'CloseEvent'.
+      ,-[worker-configuration.d.ts:3440:15]
+ 3439 |  */
+ 3440 | declare class CloseEvent extends Event {
+      :               ^^^^^^^^^^
+ 3441 |     constructor(type: string, initializer?: CloseEventInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'WebSocketEventMap'.
+      ,-[worker-configuration.d.ts:3466:6]
+ 3465 | }
+ 3466 | type WebSocketEventMap = {
+      :      ^^^^^^^^^^^^^^^^^
+ 3467 |     close: CloseEvent;
+      `----
+
+  x typescript(TS2403): Subsequent variable declarations must have the same type.  Variable 'WebSocket' must be of type '{ new (url: string | URL, protocols?: string | string[] | undefined): WebSocket; prototype: WebSocket; readonly CONNECTING: 0; readonly OPEN: 1; readonly CLOSING: 2; readonly CLOSED: 3; }', but here has type '{ new (url: string, protocols?: string | string[] | undefined):
+  | WebSocket; prototype: WebSocket; readonly READY_STATE_CONNECTING: number; readonly CONNECTING: number; ... 5 more ...; readonly CLOSED: number; }'.
+      ,-[worker-configuration.d.ts:3477:13]
+ 3476 |  */
+ 3477 | declare var WebSocket: {
+      :             ^^^^^^^^^
+ 3478 |     prototype: WebSocket;
+      `----
+
+  x typescript(TS2315): Type 'EventTarget' is not generic.
+      ,-[worker-configuration.d.ts:3494:29]
+ 3493 |  */
+ 3494 | interface WebSocket extends EventTarget<WebSocketEventMap> {
+      :                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ 3495 |     accept(options?: WebSocketAcceptOptions): void;
+      `----
+
+  x typescript(TS2687): All declarations of 'readyState' must have identical modifiers.
+      ,-[worker-configuration.d.ts:3515:2]
+ 3514 |      */
+ 3515 |     readyState: number;
+      :     ^^^^^^^^^^
+ 3516 |     /**
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'readyState' must be of type '0 | 1 | 2 | 3', but here has type 'number'.
+      ,-[worker-configuration.d.ts:3515:2]
+ 3514 |      */
+ 3515 |     readyState: number;
+      :     ^^^^^^^^^^
+ 3516 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'url' must have identical modifiers.
+      ,-[worker-configuration.d.ts:3521:2]
+ 3520 |      */
+ 3521 |     url: string | null;
+      :     ^^^
+ 3522 |     /**
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'url' must be of type 'string', but here has type 'string | null'.
+      ,-[worker-configuration.d.ts:3521:2]
+ 3520 |      */
+ 3521 |     url: string | null;
+      :     ^^^
+ 3522 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'protocol' must have identical modifiers.
+      ,-[worker-configuration.d.ts:3527:2]
+ 3526 |      */
+ 3527 |     protocol: string | null;
+      :     ^^^^^^^^
+ 3528 |     /**
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'protocol' must be of type 'string', but here has type 'string | null'.
+      ,-[worker-configuration.d.ts:3527:2]
+ 3526 |      */
+ 3527 |     protocol: string | null;
+      :     ^^^^^^^^
+ 3528 |     /**
+      `----
+
+  x typescript(TS2687): All declarations of 'extensions' must have identical modifiers.
+      ,-[worker-configuration.d.ts:3533:2]
+ 3532 |      */
+ 3533 |     extensions: string | null;
+      :     ^^^^^^^^^^
+ 3534 |     /**
+      `----
+
+  x typescript(TS2717): Subsequent property declarations must have the same type.  Property 'extensions' must be of type 'string', but here has type 'string | null'.
+      ,-[worker-configuration.d.ts:3533:2]
+ 3532 |      */
+ 3533 |     extensions: string | null;
+      :     ^^^^^^^^^^
+ 3534 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'EventSource'.
+      ,-[worker-configuration.d.ts:3617:15]
+ 3616 |  */
+ 3617 | declare class EventSource extends EventTarget {
+      :               ^^^^^^^^^^^
+ 3618 |     constructor(url: string, init?: EventSourceEventSourceInit);
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'MessagePort'.
+      ,-[worker-configuration.d.ts:3738:24]
+ 3737 |  */
+ 3738 | declare abstract class MessagePort extends EventTarget {
+      :                        ^^^^^^^^^^^
+ 3739 |     /**
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'MessageChannel'.
+      ,-[worker-configuration.d.ts:3765:15]
+ 3764 |  */
+ 3765 | declare class MessageChannel {
+      :               ^^^^^^^^^^^^^^
+ 3766 |     constructor();
+      `----
+
+  x typescript(TS2300): Duplicate identifier 'Performance'.
+      ,-[worker-configuration.d.ts:3873:24]
+ 3872 |  */
+ 3873 | declare abstract class Performance {
+      :                        ^^^^^^^^^^^
+ 3874 |     /* [Cloudflare Docs Reference](https://developers.cloudflare.com/workers/runtime-apis/performance/#performancetimeorigin) */
+      `----
+
+Found 6 warnings and 204 errors.
+Finished in 7.5s on 32 files with 189 rules using 12 threads.

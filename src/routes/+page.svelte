@@ -1,2 +1,9 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	// Client-side fallback redirect if JS loads before server redirect completes
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+	onMount(() => {
+		goto('/login', { replaceState: true });
+	});
+</script>
+

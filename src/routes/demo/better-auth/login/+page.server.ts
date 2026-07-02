@@ -16,8 +16,8 @@ export const actions: Actions = {
 		const { auth } = event.locals;
 
 		const formData = await event.request.formData();
-		const email = formData.get('email')?.toString() ?? '';
-		const password = formData.get('password')?.toString() ?? '';
+		const email = (formData.get('email') as string | null) ?? '';
+		const password = (formData.get('password') as string | null) ?? '';
 
 		try {
 			await auth.api.signInEmail({
@@ -40,9 +40,9 @@ export const actions: Actions = {
 		const { auth } = event.locals;
 
 		const formData = await event.request.formData();
-		const email = formData.get('email')?.toString() ?? '';
-		const password = formData.get('password')?.toString() ?? '';
-		const name = formData.get('name')?.toString() ?? '';
+		const email = (formData.get('email') as string | null) ?? '';
+		const password = (formData.get('password') as string | null) ?? '';
+		const name = (formData.get('name') as string | null) ?? '';
 
 		try {
 			await auth.api.signUpEmail({

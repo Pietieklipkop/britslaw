@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vp dev",
 		"build": "wrangler types --check && vp build",
-		"preview": "wrangler dev .svelte-kit/cloudflare/_worker.js --port 4173",
+		"preview": "node node_modules/wrangler/bin/wrangler.js dev .svelte-kit/cloudflare/_worker.js --port 4173 --show-interactive-dev-session false",
 		"prepare": "vp config && svelte-kit sync || echo ''",
 		"check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -14,7 +14,7 @@
 		"format": "vp fmt .",
 		"test:unit": "vp test",
 		"test": "pnpm test:unit -- --run && pnpm test:e2e",
-		"test:e2e": "playwright install && playwright test",
+		"test:e2e": "vp build && playwright test",
 		"gen": "wrangler types",
 		"wrangler": "wrangler",
 		"d1:create": "wrangler d1 create britslaw-staging",
@@ -23,13 +23,16 @@
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "drizzle-kit migrate",
 		"db:migrate:local": "wrangler d1 migrations apply britslaw-staging --local",
+		"db:migrate:remote": "wrangler d1 migrations apply britslaw-staging --remote",
 		"db:seed": "wrangler d1 execute britslaw-staging --local --file=./src/lib/server/db/seed.sql",
 		"db:reset": "node -e \"process.env.CI='true'; const { execSync } = require('child_process'); try { require('fs').rmSync('.wrangler/state', { recursive: true, force: true }); } catch(e) {} execSync('wrangler d1 migrations apply britslaw-staging --local', { stdio: 'inherit' }); execSync('wrangler d1 execute britslaw-staging --local --file=./src/lib/server/db/seed.sql', { stdio: 'inherit' });\"",
 		"db:studio": "drizzle-kit studio",
-		"auth:schema": "better-auth generate --config src/lib/server/auth.ts --output src/lib/server/db/auth.schema.ts --yes"
+		"auth:schema": "better-auth generate --config src/lib/server/auth.ts --output src/lib/server/db/auth.schema.ts --yes",
+		"deploy": "pnpm run build && wrangler deploy"
 	},
 	"devDependencies": {
 		"@better-auth/cli": "~1.4.21",
+		"@cloudflare/workers-types": "^4.20260630.1",
 		"@eslint/js": "^10.0.1",
 		"@playwright/test": "^1.60.0",
 		"@sveltejs/adapter-cloudflare": "^7.2.8",
@@ -49,9 +52,9 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.1",
 		"vite": "catalog:",
+		"vite-plus": "catalog:",
 		"vitest": "catalog:",
-		"wrangler": "^4.97.0",
-		"vite-plus": "catalog:"
+		"wrangler": "^4.97.0"
 	},
 	"packageManager": "pnpm@11.9.0"
 }
