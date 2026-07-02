@@ -56,5 +56,14 @@
 		"vitest": "catalog:",
 		"wrangler": "^4.97.0"
 	},
-	"packageManager": "pnpm@11.9.0"
+	"packageManager": "pnpm@11.9.0",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"@prisma/client",
+			"better-sqlite3",
+			"esbuild",
+			"sharp",
+			"workerd"
+		]
+	}
 }
