@@ -14,6 +14,7 @@
 				{
 					"binding": "DB",
 					"database_name": "britslaw-staging",
+					"database_id": "0e03cf54-1e01-4027-8897-3093b8f36359",
 					"migrations_dir": "./drizzle"
 				}
 			]
@@ -23,7 +24,7 @@
 		{
 			"binding": "DB",
 			"database_name": "britslaw",
-			"database_id": "0e03cf54-1e01-4027-8897-3093b8f36359",
+			"database_id": "1a428533-01af-49ee-9da0-187941ab28f4",
 			"migrations_dir": "./drizzle"
 		}
 	],
