@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vp dev",
 		"build": "wrangler types --check && vp build",
-		"preview": "wrangler dev .svelte-kit/cloudflare/_worker.js --port 4173",
+		"preview": "wrangler dev .svelte-kit/cloudflare/_worker.js --port 4173 --non-interactive",
 		"prepare": "vp config && svelte-kit sync || echo ''",
 		"check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -14,7 +14,7 @@
 		"format": "vp fmt .",
 		"test:unit": "vp test",
 		"test": "pnpm test:unit -- --run && pnpm test:e2e",
-		"test:e2e": "playwright install && playwright test",
+		"test:e2e": "vp build && playwright install && playwright test",
 		"gen": "wrangler types",
 		"wrangler": "wrangler",
 		"d1:create": "wrangler d1 create britslaw-staging",
