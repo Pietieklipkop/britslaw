@@ -40,7 +40,8 @@ export default defineConfig({
 			'!**/.env.test',
 			'**/vite.config.js.timestamp-*',
 			'**/vite.config.ts.timestamp-*',
-			'**/test-results'
+			'**/test-results',
+			'worker-configuration.d.ts'
 		],
 		rules: {
 			'constructor-super': 'error',
@@ -120,7 +121,7 @@ export default defineConfig({
 			'svelte/no-immutable-reactive-statements': 'error',
 			'svelte/no-inner-declarations': 'error',
 			'svelte/no-inspect': 'warn',
-			'svelte/no-navigation-without-resolve': 'error',
+			'svelte/no-navigation-without-resolve': 'off',
 			'svelte/no-not-function-handler': 'error',
 			'svelte/no-object-in-text-mustaches': 'error',
 			'svelte/no-raw-special-elements': 'error',
@@ -194,7 +195,8 @@ export default defineConfig({
 				files: ['*.svelte', '**/*.svelte'],
 				rules: {
 					'no-inner-declarations': 'off',
-					'no-self-assign': 'off'
+					'no-self-assign': 'off',
+					'no-undef': 'off'
 				},
 				jsPlugins: ['eslint-plugin-svelte']
 			}

@@ -3,12 +3,27 @@ import { betterAuth } from 'better-auth/minimal';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
 import { sveltekitCookies } from 'better-auth/svelte-kit';
 import { getRequestEvent } from '$app/server';
+import type { D1Database } from '@cloudflare/workers-types';
 import { getDb } from '$lib/server/db';
 
 const authConfig = {
 	baseURL: env.ORIGIN || 'http://localhost:5173',
-	secret: env.BETTER_AUTH_SECRET || 'a_very_long_dummy_secret_for_build_time_validation_placeholder',
+	secret:
+		env.BETTER_AUTH_SECRET || 'a_very_long_dummy_secret_for_build_time_validation_placeholder',
 	emailAndPassword: { enabled: true },
+	user: {
+		additionalFields: {
+			role: {
+				type: 'string',
+				defaultValue: 'end_user',
+				required: true
+			},
+			tenantId: {
+				type: 'string',
+				required: false
+			}
+		}
+	},
 	plugins: [
 		sveltekitCookies(getRequestEvent) // make sure this is the last plugin in the array
 	]
