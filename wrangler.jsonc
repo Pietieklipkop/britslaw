@@ -2,11 +2,17 @@
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "britslaw",
 	"compatibility_date": "2026-06-29",
-	"compatibility_flags": ["nodejs_als"],
+	"compatibility_flags": ["nodejs_compat"],
 	"main": ".svelte-kit/cloudflare/_worker.js",
 	"assets": {
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
+	},
+	"vars": {
+		"BETTER_AUTH_URL": "https://britslaw.stefanvandyk3.workers.dev,https://*-britslaw.stefanvandyk3.workers.dev"
+	},
+	"secrets": {
+		"required": ["BETTER_AUTH_SECRET"]
 	},
 	"env": {
 		"staging": {
@@ -14,16 +20,23 @@
 				{
 					"binding": "DB",
 					"database_name": "britslaw-staging",
+					"database_id": "0e03cf54-1e01-4027-8897-3093b8f36359",
 					"migrations_dir": "./drizzle"
 				}
-			]
+			],
+			"vars": {
+				"BETTER_AUTH_URL": "https://britslaw.stefanvandyk3.workers.dev,https://*-britslaw.stefanvandyk3.workers.dev"
+			},
+			"secrets": {
+				"required": ["BETTER_AUTH_SECRET"]
+			}
 		}
 	},
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "britslaw-staging",
-			"database_id": "0e03cf54-1e01-4027-8897-3093b8f36359",
+			"database_name": "britslaw",
+			"database_id": "1a428533-01af-49ee-9da0-187941ab28f4",
 			"migrations_dir": "./drizzle"
 		}
 	],
