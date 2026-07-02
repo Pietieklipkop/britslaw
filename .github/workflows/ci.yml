@@ -50,11 +50,3 @@ jobs:
 
       - name: Run E2E tests
         run: vp run test:e2e
-
-      - name: Deploy Preview
-        if: github.event_name == 'pull_request'
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --environment staging
