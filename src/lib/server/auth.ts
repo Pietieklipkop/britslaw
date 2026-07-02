@@ -6,8 +6,42 @@ import { getRequestEvent } from '$app/server';
 import type { D1Database } from '@cloudflare/workers-types';
 import { getDb } from '$lib/server/db';
 
+const parseBetterAuthUrl = (urlEnv: string | undefined) => {
+	if (!urlEnv) return undefined;
+
+	const urls = urlEnv
+		.split(',')
+		.map((u) => u.trim())
+		.filter(Boolean);
+	if (urls.length === 0) return undefined;
+
+	const allowedHosts: string[] = [];
+	const fallback = urls[0];
+
+	for (const urlStr of urls) {
+		let host = urlStr;
+		if (host.includes('://')) {
+			host = host.split('://')[1];
+		}
+		host = host.split('/')[0].split('?')[0];
+		if (host) {
+			allowedHosts.push(host);
+		}
+	}
+
+	if (urls.length > 1 || allowedHosts.some((h) => h.includes('*'))) {
+		return {
+			allowedHosts,
+			fallback,
+			protocol: 'auto' as const
+		};
+	}
+
+	return fallback;
+};
+
 const authConfig = {
-	baseURL: env.ORIGIN || 'http://localhost:5173',
+	baseURL: parseBetterAuthUrl(env.BETTER_AUTH_URL) || 'http://localhost',
 	secret:
 		env.BETTER_AUTH_SECRET || 'a_very_long_dummy_secret_for_build_time_validation_placeholder',
 	emailAndPassword: { enabled: true },

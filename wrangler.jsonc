@@ -8,6 +8,12 @@
 		"binding": "ASSETS",
 		"directory": ".svelte-kit/cloudflare"
 	},
+	"vars": {
+		"BETTER_AUTH_URL": "http://localhost:5173,http://localhost:8787"
+	},
+	"secrets": {
+		"required": ["BETTER_AUTH_SECRET"]
+	},
 	"env": {
 		"staging": {
 			"d1_databases": [
@@ -17,7 +23,10 @@
 					"database_id": "0e03cf54-1e01-4027-8897-3093b8f36359",
 					"migrations_dir": "./drizzle"
 				}
-			]
+			],
+			"secrets": {
+				"required": ["BETTER_AUTH_SECRET"]
+			}
 		}
 	},
 	"d1_databases": [
