@@ -19,7 +19,7 @@
 | **Hosting**        | Cloudflare Workers                                                   | Edge compute, global low-latency                        |
 | **PDF Generation** | Puppeteer (via Cloudflare Worker) or `@react-pdf/renderer` / `jsPDF` | Server-side HTML-to-PDF rendering                       |
 | **File Storage**   | Cloudflare R2                                                        | Store generated PDFs, template assets                   |
-| **Email**          | Resend                                                               | Transactional email (invitations, notifications)        |
+| **Email**          | Cloudflare Email Routing / Mail                                      | Transactional email (invitations, notifications)        |
 | **Toolchain**      | Vite+ (vp)                                                           | Unified build, lint, test runner                        |
 | **Testing**        | Vitest (unit) + Playwright (e2e)                                     | Full test coverage                                      |
 | **Linting**        | ESLint + Prettier (via Oxlint/Oxfmt)                                 | Code quality                                            |
@@ -39,8 +39,8 @@
 │  │              │   └────────────────┘   └───────────────┘  │
 │  │  - Routes    │                                            │
 │  │  - API       │   ┌────────────────┐                      │
-│  │  - Auth      │──►│   Resend       │                      │
-│  │  - PDF Gen   │   │  (Email)       │                      │
+│  │  - Auth      │──►│   Cloudflare   │                      │
+│  │  - PDF Gen   │   │   Email / Mail │                      │
 │  └──────────────┘   └────────────────┘                      │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -78,7 +78,7 @@ britslaw/
 │   │   │   ├── pdf/
 │   │   │   │   └── generator.ts     # PDF generation service
 │   │   │   ├── email/
-│   │   │   │   └── sender.ts        # Resend email service
+│   │   │   │   └── sender.ts        # Cloudflare Mail / Email service
 │   │   │   └── tenant.ts            # Tenant resolution middleware
 │   │   ├── components/
 │   │   │   ├── ui/                  # Base UI primitives
@@ -146,8 +146,8 @@ britslaw/
 - [x] Configure Drizzle schema (auth, tenants, users)
 - [x] Set up Better Auth with roles (platform_admin, firm_admin, firm_editor, end_user)
 - [x] Implement tenant resolution in `hooks.server.ts`
-- [ ] Set up Cloudflare R2 bucket for file storage
-- [ ] Configure Resend for transactional email
+- [x] Set up Cloudflare R2 bucket for file storage
+- [x] Configure Cloudflare Mail / Email Routing for transactional email
 - [x] Set up GitHub Actions CI (lint → type-check → test → deploy preview)
 - [x] Seed database with test tenant, admin user, and sample data
 
@@ -507,7 +507,7 @@ BETTER_AUTH_SECRET=    # 32-char random secret
 BETTER_AUTH_URL=       # App base URL
 
 # Email
-RESEND_API_KEY=        # Resend API key
+CLOUDFLARE_MAIL_API_TOKEN=  # Cloudflare Mail API Token / Binding
 
 # App
 PUBLIC_APP_NAME=LegalForge

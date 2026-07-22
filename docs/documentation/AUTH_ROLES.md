@@ -166,7 +166,7 @@ export const auth = betterAuth({
 
 1. Firm Admin creates invitation → system generates a signed token (JWT, 72hr expiry).
 2. Token is stored in `user_invitations` table with `email`, `tenant_id`, `role`, `expires_at`.
-3. Email sent via Resend with a link: `https://{slug}.legalforge.co.za/register?token={token}`.
+3. Email sent via Cloudflare Mail / Email Routing with a link: `https://{slug}.legalforge.co.za/register?token={token}`.
 4. On registration page load, token is validated server-side.
 5. On form submit, user record is created with the pre-determined `tenant_id` and `role`.
 6. Invitation token is marked as used.

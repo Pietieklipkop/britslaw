@@ -203,7 +203,7 @@ Auth: End User (must own contract)
 5. Call `generateContractPDF()`.
 6. Upload PDF to R2 at `/{tenantId}/contracts/{contractId}/contract.pdf`.
 7. Update `contracts.status = 'generated'` and `contracts.pdf_url`.
-8. Send confirmation email via Resend.
+8. Send confirmation email via Cloudflare Mail / Email Routing.
 9. Return `{ success: true, downloadUrl: '...' }`.
 
 **Estimated duration:** 3–8 seconds. Consider returning `202 Accepted` and polling for completion, or use SvelteKit streaming.

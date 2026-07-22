@@ -52,4 +52,4 @@ Welcome to the LegalForge project documentation. This folder contains all refere
 - **Target market:** South African law firms (expandable)
 - **Primary auth:** Email/password + Magic Link (Better Auth)
 - **PDF storage:** Cloudflare R2
-- **Email:** Resend
+- **Email:** Cloudflare Email Routing / Mail
